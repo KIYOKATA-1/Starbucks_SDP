@@ -5,5 +5,5 @@ abstract class CoffeeDecorator extends StrarbucksCoffee{
         this.coffee = coffee;
     }
 
-
+    public abstract String getDescription();
 }
