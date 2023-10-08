@@ -14,4 +14,14 @@ class Frappuccino extends StrarbucksCoffee{
             return 1.99;
         }
     }
+
+    class Moka extends StrarbucksCoffee{
+        public Moka(){
+            description = "Мока";
+        }
+
+        public double cost(){
+            return 5.99;
+        }
+    }
 }
