@@ -1,5 +1,11 @@
+import java.util.Scanner;
 public class CoffeeShop {
     public static void main(String[] args) {
-        System.out.println("Hello world!");
+        Scanner scanner = new Scanner(System.in);
+
+
+        StrarbucksCoffee coffee = null;
+
+
     }
 }
