@@ -8,7 +8,7 @@
 ### •	 cost() is an abstract method that subclasses must implement to calculate the cost of a coffee (another method that can be decorated). 
 
 
-abstract class StrarbucksCoffee {
+`` abstract class StrarbucksCoffee {
     String description = "Coffee";
 
     public String getDescription(){
@@ -16,7 +16,7 @@ abstract class StrarbucksCoffee {
     }
 
     public abstract double cost();
-}
+} ``
 
 # Abstract class CoffeeDecorator:
 ### • Expands StarbucksCoffee.
@@ -26,21 +26,21 @@ abstract class StrarbucksCoffee {
 
 ### • getDescription() is an abstract method that subclasses must implement to return a description of the coffee with the topping added
 
-   abstract class CoffeeDecorator extends StrarbucksCoffee{
+  `` abstract class CoffeeDecorator extends StrarbucksCoffee{
     StrarbucksCoffee coffee;
 
     public CoffeeDecorator(StrarbucksCoffee coffee){
         this.coffee = coffee;
     }
 
-    public abstract String getDescription();
+    public abstract String getDescription(); ``
 
 # Decorator classes (MilkDecorator, SoymilkDecorator, CoconutDecorator):
 ### • Extend CoffeeDecorator.
 ### • Implement the abstract getDescription() method to add a specific flavor to the coffee description.
 ### • Implement the cost() method, which takes into account the cost of the added topping when calculating the total cost of the coffee.
 
-class MilkDecorator extends CoffeeDecorator{
+`` class MilkDecorator extends CoffeeDecorator{
     public MilkDecorator(StrarbucksCoffee coffee){
         super(coffee);
     }
@@ -52,11 +52,11 @@ class MilkDecorator extends CoffeeDecorator{
     public double cost(){
         return coffee.cost() + 0;
     }
-}
+} ``
 
 
 
-class SoymilkDecorator extends CoffeeDecorator{
+`` class SoymilkDecorator extends CoffeeDecorator{
     public SoymilkDecorator(StrarbucksCoffee coffee){
         super(coffee);
     }
@@ -69,7 +69,6 @@ class SoymilkDecorator extends CoffeeDecorator{
         return coffee.cost() + 0.50;
     }
 }
-
 
 class CoconutDecorator extends CoffeeDecorator{
     public  CoconutDecorator(StrarbucksCoffee coffee){
@@ -84,13 +83,13 @@ class CoconutDecorator extends CoffeeDecorator{
         return coffee.cost() + 1.75;
 
     }
-}
+} ``
 
 # Classes of specific types of coffee (Frappuccino, Latte, Moka):
 ### • Expanding StarbucksCoffee.
 ### • Implement the abstract cost() method, providing specific cost values for each type of coffee.
 
-class Frappuccino extends StrarbucksCoffee {
+`` class Frappuccino extends StrarbucksCoffee {
     public Frappuccino() {
         description = "Фраппуччино";
     }
@@ -117,4 +116,4 @@ class Frappuccino extends StrarbucksCoffee {
         public double cost(){
             return 5.99;
         }
-    }
+    } `` 
