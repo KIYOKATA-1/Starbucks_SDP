@@ -98,7 +98,7 @@ class Frappuccino extends StrarbucksCoffee {
     }
 }
     class Latte extends StrarbucksCoffee{
-        public Latte(){
+    public Latte(){
             description = "Латте";
         }
 
@@ -106,7 +106,7 @@ class Frappuccino extends StrarbucksCoffee {
             return 1.99;
         }
     }
-
+    
     class Moka extends StrarbucksCoffee{
         public Moka(){
             description = "Мока";
